@@ -1,13 +1,14 @@
-namespace PaeezanAssignment_Server.Common.Socket.Room.Commands.Base;
-
-public class GameCommand : IGameCommand
+namespace Common.Socket.Room.Commands.Base
 {
-    public GameCommandType Type { get; set; }
-    public string UserId { get; set; }
-    public int PlayerIndex { get; set; }
-
-    public T GetSubType<T>() where T : GameCommand
+    public class GameCommand : IGameCommand
     {
-        return this as T;
+        public GameCommandType Type { get; set; }
+        public string UserId { get; set; }
+        public int PlayerIndex { get; set; }
+
+        public T GetSubType<T>() where T : GameCommand
+        {
+            return this as T;
+        }
     }
 }

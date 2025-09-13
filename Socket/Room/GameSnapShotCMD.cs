@@ -1,8 +1,8 @@
-using PaeezanAssignment_Server.Common.Socket.Room.Commands.Base;
+using Common.Socket.Room.Commands.Base;
 
-namespace PaeezanAssignment_Server.Common.Socket.Room;
-
-public class GameSnapShotCMD : GameCommand
+namespace Common.Socket.Room
 {
-    
+    public class GameSnapShotCMD : GameCommand
+    {
+    }
 }

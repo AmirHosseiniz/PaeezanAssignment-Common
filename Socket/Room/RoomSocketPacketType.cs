@@ -1,10 +1,11 @@
-namespace PaeezanAssignment_Server.Common.Socket;
-
-public enum RoomSocketPacketType
+namespace Common.Socket
 {
-    PI, // ping
-    PO, // pong
-    C, // connect 
-    D, // disconnect
-    M  // message
+    public enum RoomSocketPacketType
+    {
+        PI, // ping
+        PO, // pong
+        C, // connect 
+        D, // disconnect
+        M // message
+    }
 }

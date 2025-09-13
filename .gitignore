@@ -1,0 +1,12 @@
+*.meta
+*.cs.meta
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/Common/v17/.suo
+/.vs/Common/v17
+/.vs/Common/FileContentIndex/read.lock
+/.vs/Common/FileContentIndex/e989d884-da67-4e25-8b5e-71da5bd21ce0.vsidx
+/.vs/Common/FileContentIndex/5f760c01-ef16-49bc-8f2e-0b839ba1cba9.vsidx
+/.vs/Common/FileContentIndex
+/.vs/Common
+/.vs

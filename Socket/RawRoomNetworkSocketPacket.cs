@@ -1,8 +1,9 @@
-namespace PaeezanAssignment_Server.Common.Socket;
-
-public class RawRoomNetworkSocketPacket
+namespace Common.Socket
 {
-    public string UserId { get; set; }
-    public RoomSocketPacketType Type { get; set; }
-    public string Data { get; set; }
+    public class RawRoomNetworkSocketPacket
+    {
+        public string UserId { get; set; }
+        public RoomSocketPacketType Type { get; set; }
+        public string Data { get; set; }
+    }
 }

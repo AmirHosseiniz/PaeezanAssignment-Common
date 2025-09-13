@@ -1,8 +1,13 @@
-namespace Common.DTO;
+using System;
+using System.Collections.Generic;
 
-public class MatchInfo
+namespace Common.DTO
 {
-    public Guid Adress { get; set; }
-    public int ParticipantCount { get; set; }
-    public List<string> participants { get; set; }
+    public class MatchInfo
+    {
+        public Guid Adress { get; set; }
+        public int ParticipantCount { get; set; }
+        public List<string> participants { get; set; }
+    }
 }
+

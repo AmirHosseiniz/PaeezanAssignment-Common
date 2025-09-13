@@ -1,7 +1,8 @@
-namespace PaeezanAssignment_Server.Common.Socket.Event;
-
-public enum MethodType
+namespace Common.Socket.Event
 {
-    Login,
-    MatchMaking
+    public enum MethodType
+    {
+        Login,
+        MatchMaking
+    }
 }

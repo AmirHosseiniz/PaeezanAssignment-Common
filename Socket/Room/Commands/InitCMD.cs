@@ -1,13 +1,14 @@
-using PaeezanAssignment_Server.Common.Socket.Room.Commands.Base;
+using Common.Socket.Room.Commands.Base;
 
-namespace PaeezanAssignment_Server.Common.Socket.Room.Commands;
-
-public class InitCMD : GameCommand
+namespace Common.Socket.Room.Commands
 {
-    public readonly string S;
-
-    public InitCMD(string s)
+    public class InitCMD : GameCommand
     {
-        S = s;
+        public readonly string S;
+
+        public InitCMD(string s)
+        {
+            S = s;
+        }
     }
 }

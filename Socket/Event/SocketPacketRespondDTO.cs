@@ -1,14 +1,16 @@
 using Newtonsoft.Json;
 
-namespace HokmGG.Backend.Models.SocketDTO;
-
-public class SocketPacketRespondDTO
+namespace Common.Socket.Event
 {
-    public int Type;
-    public dynamic? Data { get; set; }
-    public string Error { get; set; }
-    public string Serialize()
+    public class SocketPacketRespondDTO
     {
-        return JsonConvert.SerializeObject(this);
+        public int Type;
+        public dynamic? Data { get; set; }
+        public string Error { get; set; }
+
+        public string Serialize()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
     }
 }

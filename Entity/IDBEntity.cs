@@ -1,6 +1,7 @@
-namespace Common.Entity;
-
-public interface IDBEntity
+namespace Common.Entity
 {
-    public int Id { get; set; }
+    public interface IDBEntity
+    {
+        public int Id { get; set; }
+    }
 }

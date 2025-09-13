@@ -1,13 +1,14 @@
-namespace PaeezanAssignment_Server.Common.Socket;
-
-public class RawEventNetworkSocketPacket
+namespace Common.Socket
 {
-    public string UserId { get; set; }
-    public string Data { get; set; }
-
-    public RawEventNetworkSocketPacket(string userId, string data)
+    public class RawEventNetworkSocketPacket
     {
-        UserId = userId;
-        Data = data;
+        public string UserId { get; set; }
+        public string Data { get; set; }
+
+        public RawEventNetworkSocketPacket(string userId, string data)
+        {
+            UserId = userId;
+            Data = data;
+        }
     }
 }
