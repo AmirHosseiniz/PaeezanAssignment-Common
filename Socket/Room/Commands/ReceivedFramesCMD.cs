@@ -2,12 +2,6 @@ using PaeezanAssignment_Server.Common.Socket.Room.Commands.Base;
 
 namespace PaeezanAssignment_Server.Common.Socket.Room.Commands;
 
-public class InitCMD : GameCommand
+public class ReceivedFramesCMD : GameCommand
 {
-    public readonly string S;
-
-    public InitCMD(string s)
-    {
-        S = s;
-    }
 }
