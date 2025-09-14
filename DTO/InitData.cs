@@ -1,6 +1,9 @@
-namespace Common.DTO;
+using Common.DTO;
 
-public class InitData
+namespace Common.DTO
 {
-    public UserDto user { get; set; }
+    public class InitData
+    {
+        public UserDto user { get; set; }
+    }
 }
