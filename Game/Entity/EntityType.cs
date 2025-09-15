@@ -6,5 +6,6 @@ namespace PaeezanAssignment_Server.Common.Game.Entity
         Melee = 1,
         Archer = 2,
         Projectile = 3,
+        Unknown = -1
     }
 }

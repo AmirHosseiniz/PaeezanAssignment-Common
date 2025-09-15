@@ -12,6 +12,8 @@ namespace PaeezanAssignment_Server.Common.Game.Physics
 
         private readonly long rawValue;
 
+        public long RawValue => rawValue;
+
         public Fix64(long rawValue)
         {
             this.rawValue = rawValue;
