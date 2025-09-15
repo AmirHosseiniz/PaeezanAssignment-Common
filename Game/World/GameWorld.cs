@@ -1,6 +1,7 @@
 // Game/GameWorld.cs  (clean separation: owns systems, not physics)
 
 using Newtonsoft.Json;
+using PaeezanAssignment_Server.Common.Game;
 using PaeezanAssignment_Server.Common.Game.Simulation;
 
 public sealed class GameWorld
