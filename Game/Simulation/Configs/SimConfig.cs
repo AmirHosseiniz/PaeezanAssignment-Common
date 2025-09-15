@@ -1,10 +1,13 @@
-namespace PaeezanAssignment_Server.Common.Game.Simulation;
+using System;
 
-[Serializable]
-public sealed class SimConfig
+namespace PaeezanAssignment_Server.Common.Game.Simulation
 {
-    public MapConfig map { get; set; } = new MapConfig();
-    public TowerConfig towers { get; set; } = new TowerConfig();
-    public MeleeConfig melee { get; set; } = new MeleeConfig();
-    public ArcherConfig archer { get; set; } = new ArcherConfig();
+    [Serializable]
+    public sealed class SimConfig
+    {
+        public MapConfig map { get; set; } = new MapConfig();
+        public TowerConfig towers { get; set; } = new TowerConfig();
+        public MeleeConfig melee { get; set; } = new MeleeConfig();
+        public ArcherConfig archer { get; set; } = new ArcherConfig();
+    }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace PaeezanAssignment_Server.Common.Game.Physics
 {
     public struct Fix64

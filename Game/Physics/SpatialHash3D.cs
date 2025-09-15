@@ -1,5 +1,8 @@
 // Physics/SpatialHash3D.cs  (simple uniform grid broadphase)
 
+using System;
+using System.Collections.Generic;
+
 namespace PaeezanAssignment_Server.Common.Game.Physics
 {
     internal sealed class SpatialHash3D
