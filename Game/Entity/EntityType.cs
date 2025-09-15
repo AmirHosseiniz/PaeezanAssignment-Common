@@ -1,9 +1,10 @@
-namespace PaeezanAssignment_Server.Common.Game.Entity;
-
-public enum EntityType
+namespace PaeezanAssignment_Server.Common.Game.Entity
 {
-    Tower = 0,
-    Melee = 1,
-    Archer = 2,
-    Projectile = 3,
+    public enum EntityType
+    {
+        Tower = 0,
+        Melee = 1,
+        Archer = 2,
+        Projectile = 3,
+    }
 }

@@ -1,10 +1,13 @@
-namespace PaeezanAssignment_Server.Common.Game.Entity;
+using PaeezanAssignment_Server.Common.Game.Physics;
 
-public sealed class MeleeUnitEntity : UnitEntity
+namespace PaeezanAssignment_Server.Common.Game.Entity
 {
-    public MeleeUnitEntity(int owner, Fix64 hp, Fix64 speed, Fix64 dmg, Fix64 range, Fix64 cooldown)
-        : base(owner, hp, speed, dmg, range, cooldown)
+    public sealed class MeleeUnitEntity : UnitEntity
     {
-        Type = EntityType.Melee;
+        public MeleeUnitEntity(int owner, Fix64 hp, Fix64 speed, Fix64 dmg, Fix64 range, Fix64 cooldown)
+            : base(owner, hp, speed, dmg, range, cooldown)
+        {
+            Type = EntityType.Melee;
+        }
     }
 }

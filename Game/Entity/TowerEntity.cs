@@ -1,12 +1,15 @@
-namespace PaeezanAssignment_Server.Common.Game.Entity;
+using PaeezanAssignment_Server.Common.Game.Physics;
 
-public sealed class TowerEntity : GameEntity
+namespace PaeezanAssignment_Server.Common.Game.Entity
 {
-    public TowerEntity(int owner, Fix64 maxHp)
+    public sealed class TowerEntity : GameEntity
     {
-        Owner = owner;
-        Type = EntityType.Tower;
-        MaxHP = maxHp;
-        HP = maxHp;
+        public TowerEntity(int owner, Fix64 maxHp)
+        {
+            Owner = owner;
+            Type = EntityType.Tower;
+            MaxHP = maxHp;
+            HP = maxHp;
+        }
     }
 }

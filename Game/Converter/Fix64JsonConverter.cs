@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using PaeezanAssignment_Server.Common.Game.Physics;
 
 public sealed class Fix64JsonConverter : JsonConverter<Fix64>
 {
