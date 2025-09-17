@@ -1,5 +1,6 @@
 using PaeezanAssignment_Server.Common.Game.Physics;
 using PaeezanAssignment_Server.Common.Game.Simulation;
+using UnityEngine;
 
 namespace PaeezanAssignment_Server.Common.Game.Entity
 {
@@ -23,7 +24,8 @@ namespace PaeezanAssignment_Server.Common.Game.Entity
             var origin = Body.WorldPosition;
             var aim = target.Body.WorldPosition - origin;
             var dist = aim.Magnitude;
-            var dir = dist > Fix64.Zero ? aim / dist : FixedVector3.Right;
+            // var dir = dist > Fix64.Zero ? aim / dist : FixedVector3.Right;
+            var dir = Owner == 0 ? FixedVector3.Right : FixedVector3.Left;
             sim.SpawnProjectile(this, target, origin, dir, _projectileSpeed, AttackDamage);
             CooldownTimer = AttackCooldown;
         }

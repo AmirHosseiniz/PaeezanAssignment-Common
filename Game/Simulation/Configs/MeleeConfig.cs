@@ -12,6 +12,7 @@ namespace PaeezanAssignment_Server.Common.Game.Simulation
         public Fix64 range { get; set; } = Fix64.FromFloat(1.5f);
         public Fix64 cooldown { get; set; } = Fix64.FromFloat(0.8f); // seconds
         public Fix64 radius { get; set; } = Fix64.FromFloat(0.5f);
+        public Fix64 initialPosX { get; set; } = Fix64.Zero;
         public int countPerSide { get; set; } = 0; // integral count kept as int
     }
 }

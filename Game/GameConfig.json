@@ -1,6 +1,37 @@
 {
-  "map": { "width": 30, "height": 10, "laneY": 0 },
-  "towers": { "hp": 500, "size": { "x": 2, "y": 5, "z": 2 }, "halfGapToEdge": 3 },
-  "melee": { "hp": 100, "speed": 3, "damage": 20, "range": 1.5, "cooldown": 0.8, "radius": 0.5, "countPerSide": 2 },
-  "archer": { "hp": 80, "speed": 2.5, "damage": 15, "range": 6.0, "cooldown": 1.2, "radius": 0.5, "projectileSpeed": 12, "countPerSide": 2 }
+  "map": {
+    "width": 30,
+    "height": 10,
+    "laneY": 0
+  },
+  "towers": {
+    "hp": 500,
+    "size": {
+      "x": 2,
+      "y": 5,
+      "z": 2
+    },
+    "halfGapToEdge": 3
+  },
+  "melee": {
+    "hp": 100,
+    "speed": 3,
+    "damage": 20,
+    "range": 1.5,
+    "cooldown": 0.8,
+    "radius": 0.5,
+    "countPerSide": 2,
+    "initialPosX": 8
+  },
+  "archer": {
+    "hp": 80,
+    "speed": 2.5,
+    "damage": 15,
+    "range": 6.0,
+    "cooldown": 1.2,
+    "radius": 0.5,
+    "projectileSpeed": 12,
+    "countPerSide": 2,
+    "initialPosX": 10
+  }
 }

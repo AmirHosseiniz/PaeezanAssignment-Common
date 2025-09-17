@@ -13,6 +13,7 @@ namespace PaeezanAssignment_Server.Common.Game.Simulation
         public Fix64 cooldown { get; set; } = Fix64.FromFloat(1.2f);
         public Fix64 radius { get; set; } = Fix64.FromFloat(0.5f);
         public Fix64 projectileSpeed { get; set; } = Fix64.FromInt(12);
+        public Fix64 initialPosX { get; set; } = Fix64.Zero;
         public int countPerSide { get; set; } = 0;
     }
 }

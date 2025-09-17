@@ -33,6 +33,7 @@ namespace PaeezanAssignment_Server.Common.Game.Entity
 
             // Find best target (nearest enemy within range)
             var target = sim.FindNearestEnemy(this, AttackRange);
+            
             if (target != null)
             {
                 var dist = FixedVector3.Distance(Body.WorldPosition, target.Body.WorldPosition);

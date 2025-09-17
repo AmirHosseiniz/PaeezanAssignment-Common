@@ -115,28 +115,32 @@ namespace PaeezanAssignment_Server.Common.Game.Simulation
             for (int i = 0; i < Config.melee.countPerSide; i++)
             {
                 SpawnUnit(isArcher: false, owner: 0, laneOffsetZ: Fix64.Zero,
-                    extraOffsetX: Fix64.FromFloat(1.5f) * Fix64.FromInt(i));
+                    Config.melee.initialPosX);
+                SpawnUnit(isArcher: false, owner: 0, laneOffsetZ: Fix64.Zero,
+                    Config.melee.initialPosX + Fix64.One);
                 SpawnUnit(isArcher: false, owner: 1, laneOffsetZ: Fix64.Zero,
-                    extraOffsetX: Fix64.FromFloat(1.5f) * Fix64.FromInt(i));
+                    Config.melee.initialPosX);
             }
 
             for (int i = 0; i < Config.archer.countPerSide; i++)
             {
                 SpawnUnit(isArcher: true, owner: 0, laneOffsetZ: Fix64.Zero,
-                    extraOffsetX: Fix64.FromFloat(1.5f) * Fix64.FromInt(i));
+                    Config.archer.initialPosX);
+                SpawnUnit(isArcher: true, owner: 0, laneOffsetZ: Fix64.Zero,
+                    Config.archer.initialPosX + Fix64.One);
                 SpawnUnit(isArcher: true, owner: 1, laneOffsetZ: Fix64.Zero,
-                    extraOffsetX: Fix64.FromFloat(1.5f) * Fix64.FromInt(i));
+                    Config.archer.initialPosX);
             }
         }
 
-        public UnitEntity SpawnUnit(bool isArcher, int owner, Fix64 laneOffsetZ, Fix64 extraOffsetX)
+        public UnitEntity SpawnUnit(bool isArcher, int owner, Fix64 laneOffsetZ, Fix64 _startX)
         {
             var laneY = Config.map.laneY;
             var width = Config.map.width;
             var gap = Config.towers.halfGapToEdge;
             var startX = owner == 0
-                ? (-width * Fix64.Half + gap + extraOffsetX)
-                : (width * Fix64.Half - gap - extraOffsetX);
+                ? (-Fix64.One * _startX)
+                : (Fix64.One * _startX);
 
             UnitEntity unit = isArcher
                 ? new ArcherUnitEntity(
@@ -194,7 +198,9 @@ namespace PaeezanAssignment_Server.Common.Game.Simulation
                     Mass = Fix64.FromFloat(0.1f),
                     UseGravity = false,
                     IsTrigger = true,
-                    Velocity = dir * speed
+                    Velocity = dir * speed,
+                    Drag = Fix64.Zero,
+                    AngularDrag = Fix64.Zero
                 }
             };
             proj.BindId(World.AddBody(proj.Body));
@@ -287,6 +293,13 @@ namespace PaeezanAssignment_Server.Common.Game.Simulation
             }
 
             return best;
+        }
+
+        public bool TryGetEntity(int id, out GameEntity entity)
+        {
+            var result = _entities.TryGetValue(id, out var e);
+            entity = e;
+            return result;
         }
     }
 }
